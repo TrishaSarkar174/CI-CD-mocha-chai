@@ -1,4 +1,8 @@
-export function someFunction() {
-    return 'expected value';
-  }
-  
+// module1.js
+function someFunction() {
+    return "Hello from Module 1!";
+}
+
+module.exports = {
+    someFunction
+};

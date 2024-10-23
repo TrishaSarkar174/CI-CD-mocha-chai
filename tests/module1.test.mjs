@@ -1,9 +1,11 @@
-import { expect } from 'chai'; // ES module import for Chai
-import { someFunction } from '../module1.js'; // Update to the path of your actual module
+// tests/module1.test.mjs
+import pkg from '../module1.js'; // Import the entire module
+const { someFunction } = pkg; // Destructure the required function
 
-describe('Module 1', function () {
-  it('should return the correct value', function () {
-    const result = someFunction();
-    expect(result).to.equal('expected value');
-  });
+import { expect } from 'chai';
+
+describe('Module 1', () => {
+    it('should return the correct value', () => {
+        expect(someFunction()).to.equal('Hello from Module 1!');
+    });
 });

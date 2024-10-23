@@ -1,9 +1,11 @@
-import { expect } from 'chai';
-import { thirdFunction } from '../module3.js';
+// tests/module3.test.mjs
+import pkg from '../module3.js'; // Import the entire module
+const { calculate } = pkg; // Destructure the required function
 
-describe('Module 3', function () {
-  it('should return correct output', function () {
-    const result = thirdFunction();
-    expect(result).to.equal('output');
-  });
+import { expect } from 'chai';
+
+describe('Module 3', () => {
+    it('should return correct output', () => {
+        expect(calculate()).to.equal(42);
+    });
 });
