@@ -1,0 +1,18 @@
+{
+    "name": "my-js-project",
+    "version": "1.0.0",
+    "description": "JavaScript project with 3 modules",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "test": "mocha 'tests/**/*.mjs'",          
+      "test:module1": "mocha tests/module1.test.mjs",
+      "test:module2": "mocha tests/module2.test.mjs",
+      "test:module3": "mocha tests/module3.test.mjs"
+    },
+    "devDependencies": {
+      "chai": "^5.1.2",
+      "mocha": "^10.7.3"
+    }
+  }
+  
