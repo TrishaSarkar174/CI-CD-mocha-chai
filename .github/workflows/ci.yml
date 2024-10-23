@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+        
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -23,6 +23,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Fix Jest permission issue
+        run: chmod +x ./node_modules/.bin/mocha || true
 
       - name: Run Tests for Module 1
         run: npm run test:module1
